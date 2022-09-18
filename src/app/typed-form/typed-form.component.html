@@ -1,0 +1,28 @@
+<h2 class="mat-title">Please fill your details</h2>
+<form class="grid" [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="userName">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput type="number" formControlName="age">
+        <p matSuffix mat-icon-button>
+            YOB: {{age.value | yobCalculate}}
+            <!-- YOB6: {{calc(age.value)}} /Template function/ --> 
+        </p>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Gender</mat-label>
+        <mat-select formControlName="gender">
+            <mat-option value="one">Male</mat-option>
+            <mat-option value="two">Female</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <textarea matInput formControlName="address"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button appAppTest [testInput]="'test'" color="accent" class="mat-btn">Submit</button>
+</form>

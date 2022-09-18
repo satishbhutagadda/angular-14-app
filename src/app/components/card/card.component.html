@@ -1,0 +1,14 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{ title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ng-content select="div"></ng-content>
+      <ng-content select="[appContentHost]"></ng-content>
+      <!-- <ng-container [ngTemplateOutlet]="content"></ng-container> -->
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="previous.emit()">Previous</button>
+      <button mat-raised-button color="primary" (click)="next.emit()">Next</button>
+    </mat-card-actions>
+</mat-card>

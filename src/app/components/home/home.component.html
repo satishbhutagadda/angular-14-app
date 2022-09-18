@@ -1,0 +1,11 @@
+<mat-card-subtitle>Last app Refresh Time:  {{timestamp$() | async }}</mat-card-subtitle>
+
+<h2>Welcome to the Application!</h2>
+
+<app-card [title]="cardContent[contentIndex].heading" (previous)="previous()" (next)="next()">
+  <div #testContent>Dynamic content change</div>
+  <ng-template appContentHost></ng-template>
+  <!-- <ng-container #appContentHost></ng-container> -->
+</app-card>
+
+

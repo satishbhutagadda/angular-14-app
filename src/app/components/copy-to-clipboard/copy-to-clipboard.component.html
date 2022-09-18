@@ -1,0 +1,5 @@
+<mat-form-field appearance="fill">
+    <mat-label>Text box</mat-label>
+    <textarea matInput #textbox></textarea>
+</mat-form-field>
+<button mat-raised-button type="button" (click)="copyTextBox(textbox)">Copy to Clipboard</button>

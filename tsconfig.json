@@ -16,7 +16,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
+    "target": "es2020",
     "module": "es2020",
     "lib": [
       "es2020",
@@ -28,5 +28,11 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "typeRoots": [
+    "node_modules/@types",
+    "node_modules/@angular",
+    "node_modules/@angular/common/http",
+    "node_modules/@angular/material"
+  ]
 }

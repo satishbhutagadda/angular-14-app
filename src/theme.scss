@@ -1,0 +1,45 @@
+@use '@angular/material' as mat;
+
+@mixin text-style {
+    color: blueviolet;
+    text-decoration: solid;
+}
+
+$primary: rgb(255, 3, 3);
+
+:root{
+    --bg-color: rgb(242, 241, 241);
+}
+
+$app-custom-palette: (
+    50 : #fef8e6,
+    100 : #fdeec1,
+    200 : #fce398,
+    300 : #fbd86e,
+    400 : #facf4f,
+    500 : #f9c730,
+    600 : #f8c12b,
+    700 : #f7ba24,
+    800 : #f6b31e,
+    900 : #f5a613,
+    A100 : #ffffff,
+    A200 : #fff9f0,
+    A400 : #ffe6bd,
+    A700 : #ffdca3,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
