@@ -31,6 +31,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ChartExamplesComponent } from './components/chart-examples/chart-examples.component';
 import { VerticalBarChartComponent } from './components/vertical-bar-chart/vertical-bar-chart.component';
 import { CopyToClipboardComponent } from './components/copy-to-clipboard/copy-to-clipboard.component';
+import { RemoveTabSpaceDirective } from './shared/directives/remove-tab-space.directive';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { CopyToClipboardComponent } from './components/copy-to-clipboard/copy-to
     FullNamePipe,
     ChartExamplesComponent,
     VerticalBarChartComponent,
-    CopyToClipboardComponent
+    CopyToClipboardComponent,
+    RemoveTabSpaceDirective
   ],
   imports: [
     BrowserModule,

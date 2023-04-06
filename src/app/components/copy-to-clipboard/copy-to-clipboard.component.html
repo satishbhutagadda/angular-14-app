@@ -2,4 +2,18 @@
     <mat-label>Text box</mat-label>
     <textarea matInput #textbox></textarea>
 </mat-form-field>
-<button mat-raised-button type="button" (click)="copyTextBox(textbox)">Copy to Clipboard</button>
+<button mat-raised-button type="button" [matMenuTriggerFor]="menu" (click)="copyTextBox(textbox)">Copy to Clipboard</button>
+
+<mat-menu #menu="matMenu" >
+	<span mat-menu-item [disableRipple]="true" (click)="$event.stopPropagation()">
+        <!-- popover content begin -->
+        <form class="example-form">
+            <mat-form-field>
+                <input matInput placeholder="Popover example" value="it works!">
+            </mat-form-field>
+            <br>
+            <button color="primary" mat-raised-button>test</button>
+        </form>
+        <!-- popover content end  -->
+    </span>
+</mat-menu>

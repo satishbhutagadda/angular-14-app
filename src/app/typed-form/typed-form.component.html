@@ -2,7 +2,7 @@
 <form class="grid" [formGroup]="form" (ngSubmit)="submit()">
     <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
-        <input matInput formControlName="userName">
+        <input matInput formControlName="userName" appRemoveTabSpace [val]="form.get('userName')?.value">
     </mat-form-field>
     <mat-form-field appearance="fill">
         <mat-label>Age</mat-label>
