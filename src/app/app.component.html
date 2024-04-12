@@ -29,9 +29,15 @@
     <button mat-menu-item routerLink="vertical-bar-chart">Vertical Bar Chart</button>
   </mat-menu>
 
+  <button mat-button [matMenuTriggerFor]="routeMenu">Routing</button>
+  <mat-menu #routeMenu="matMenu" xPosition="after">
+    <button mat-menu-item routerLink="route-test">Route 1</button>
+  </mat-menu>
+
   <button mat-button [matMenuTriggerFor]="otherMenu">Other</button>
   <mat-menu #otherMenu="matMenu" xPosition="after">
     <button mat-menu-item routerLink="clipboard">Clipboard example</button>
+    <button mat-menu-item routerLink="document-viewer">Document Viewer</button>
     <button mat-menu-item>Test</button>
   </mat-menu>
 </mat-toolbar>

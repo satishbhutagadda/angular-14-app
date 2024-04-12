@@ -8,6 +8,10 @@ import { HomeComponent } from './components/home/home.component';
 import { VerticalBarChartComponent } from './components/vertical-bar-chart/vertical-bar-chart.component';
 import { TestParentComponent } from './test/test-parent/test-parent.component';
 import { TypedFormComponent } from './typed-form/typed-form.component';
+import { DocumentViewerComponent } from './components/document-viewer/document-viewer.component';
+import { RouteOneComponent } from './route-test/route-one/route-one.component';
+import { RouteTwoComponent } from './route-test/route-two/route-two.component';
+import { RouteThreeComponent } from './route-test/route-three/route-three.component';
 
 const routes: Routes = [
   {
@@ -21,13 +25,13 @@ const routes: Routes = [
     title: 'Typed Form'
   },
   {
-    path: 'can-activate', 
+    path: 'can-activate',
     component: CanActivateComponent,
     canActivate: [AuthGuard],
     title: 'Can Activate'
   },
   {
-    path: 'search-user', 
+    path: 'search-user',
     component: TestParentComponent,
     title: 'Test Parent'
   },
@@ -60,6 +64,56 @@ const routes: Routes = [
     path: 'clipboard', 
     component: CopyToClipboardComponent,
     title: 'Copy to Clipboard'
+  },
+  {
+    path: 'document-viewer', 
+    component: DocumentViewerComponent,
+    title: 'Document Viewer'
+  },
+  {
+    path: 'route-test',
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'route-one'
+      },
+      {
+        path: 'route-one',
+        component: RouteOneComponent,
+        title: 'Route One',
+      },
+      {
+        path: ':routeOneID',
+        children: [
+          {
+            path: '',
+            pathMatch: 'full',
+            redirectTo: 'route-two'
+          },
+          {
+            path: 'route-two',
+            component: RouteTwoComponent,
+            title: 'Route Two',
+          },
+          {
+            path: ':routeTwoID',
+            children: [
+              {
+                path: '',
+                pathMatch: 'full',
+                redirectTo: 'route-three'
+              },
+              {
+                path: 'route-three',
+                component: RouteThreeComponent,
+                title: 'Route Three',
+              }
+            ]
+          },
+        ]
+      },
+    ],
   },
   { path: '',
     redirectTo: '/lazy',

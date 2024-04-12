@@ -32,6 +32,11 @@ import { ChartExamplesComponent } from './components/chart-examples/chart-exampl
 import { VerticalBarChartComponent } from './components/vertical-bar-chart/vertical-bar-chart.component';
 import { CopyToClipboardComponent } from './components/copy-to-clipboard/copy-to-clipboard.component';
 import { RemoveTabSpaceDirective } from './shared/directives/remove-tab-space.directive';
+import { DocumentViewerComponent } from './components/document-viewer/document-viewer.component';
+import { NgxDocViewerModule } from 'ngx-doc-viewer';
+import { RouteOneComponent } from './route-test/route-one/route-one.component';
+import { RouteTwoComponent } from './route-test/route-two/route-two.component';
+import { RouteThreeComponent } from './route-test/route-three/route-three.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +55,11 @@ import { RemoveTabSpaceDirective } from './shared/directives/remove-tab-space.di
     ChartExamplesComponent,
     VerticalBarChartComponent,
     CopyToClipboardComponent,
-    RemoveTabSpaceDirective
+    RemoveTabSpaceDirective,
+    DocumentViewerComponent,
+    RouteOneComponent,
+    RouteTwoComponent,
+    RouteThreeComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +77,8 @@ import { RemoveTabSpaceDirective } from './shared/directives/remove-tab-space.di
     MatIconModule,
     MatCardModule,
     MatTableModule,
-    NgxChartsModule
+    NgxChartsModule,
+    NgxDocViewerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
